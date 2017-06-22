@@ -2,19 +2,63 @@
 <html lang="en">
 <head>
     <title>NYT Search</title>
-    <link href = "style.css">
-    <link href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src = "app.js"></script>
-    <script src = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href = "style.css">
 </head>
 
 <body>
     <div class="container">
+        <!--Title-->
         <div class="row">
-            <div class="col-md-8">
-                Test
+            <div id="title" class="text-center col-md-8 col-md-offset-2">
+                <span class="glyphicon glyphicon-search"></span>
+                New York Times Search
+            </div>
+        </div>
+
+        <!--Search Parameters-->
+        <div class="row">
+            <div id="parameters" class="col-md-8 col-md-offset-2">
+                <div id="searchParameterTitle">
+                    <h1>Search Term:</h1>
+                    <form>
+                        <input class="col-md-12" type="text" searchTerm="">
+                    </form>
+                        
+                    <h1>Number of Records to Retrieve:</h1>
+                    <div class="dropdown">
+                        <button class="btn col-md-12 dropdown-toggle" type="button" data-toggle="dropdown">&nbsp;</button>
+                        <ul class="dropdown-menu">
+                            <li><a value="value">1</a></li>
+                            <li><a value="value">5</a></li>
+                            <li><a value="value">10</a></li>
+                        </ul>
+                    </div>
+
+                    <h1>Start Year (Optional):</h1>
+                    
+
+                    <h1>End Year (Optional):</h1>
+
+                </div>
+                <div id="articles">
+
+                </div>
+            </div>
+        </div>
+
+        <!--Articles-->
+        <div class="row">
+            <div id="articles" class="col-md-8 col-md-offset-2">
+                <div class="container-fluid"><div id="articlesTitle">Blah Blah</div></div>
+                <div id="articleList"><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
             </div>
         </div>
     </div>
+    
+    <!--Load Scripts-->
+    <script src="app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>

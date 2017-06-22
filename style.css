@@ -1,0 +1,32 @@
+#title, #parameters, #articles {
+    border-radius: 5px;
+}
+
+#title {
+    background-color: rgb(44, 60, 104);
+    color: white;
+    padding: 64px 0 64px 0;
+    font-size: 48px;
+}
+
+#parameters {
+    background-color: green;
+}
+
+#articles {
+    background-color: yellow;
+}
+
+#articlesTitle {
+    color: #ddd;
+    padding: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: rgb(44, 60, 104);
+
+    
+}
+
+#articleList {
+    background-color: purple;
+}
