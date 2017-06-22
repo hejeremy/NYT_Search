@@ -26,12 +26,38 @@ function ajaxSearch() {
         url: url,
         method: 'GET',
     }).done(function(result) {
+        displayResults(result);
         console.log(result);
     }).fail(function(err) {
         throw err;
     });
 
     //var articles = $('#articles');
+}
+
+function displayResults(inputObject) {
+    var docs = inputObject.response.docs;
+    for (var i=0; i < 5; i++) {
+        var objectCurrent = docs[i];
+        var title = objectCurrent.headline.main;
+        var description = objectCurrent['abstract'];
+        var linkValue = objectCurrent.web_url;
+
+        var newDiv = $('<div>');
+        var headline = $('<h2>');
+        headline.text = title;
+        var plot = $('<p>');
+        plot.text = description;
+        var link = $('<a>');
+        link.attr('href', linkValue);
+        link.attr('target', '_blank');
+        link.text('Link');
+        newDiv.append(headline);
+        newDiv.append(plot);
+        newDiv.append(link);
+
+        $('#articles').append(newDiv);
+    }
 }
 
 ajaxSearch();
