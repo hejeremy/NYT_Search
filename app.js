@@ -33,3 +33,5 @@ function ajaxSearch() {
 
     //var articles = $('#articles');
 }
+
+ajaxSearch();
